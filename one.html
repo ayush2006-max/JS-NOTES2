@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom Coffee Code</title>
 </head>
-<body>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">mon</div>
+        <div class="day">tue</div>
+        <div class="day">wed</div>
+        <div class="day">thu</div>
+    </div>
     
 </body>
+<script>
+     let parentDiv = document.querySelector('.parent')
+     console.log(parentDiv)
+     console.log(parentDiv.children)
+     console.log(parentDiv.children[1])
+     //console.log(parentDiv.children[1].innerHTML)
+
+     for (let index = 0; index < parentDiv.children.length; index++) {
+        console.log(parentDiv.children[index].innerHTML)
+     }
+      const mm = parentDiv.children[1].style.color="orange"
+     console.log(mm);
+     
+     
+     
+</script>
 </html>
+
+
+<!--  div.day*4 ka matlab == 
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day"></div>
+-->
