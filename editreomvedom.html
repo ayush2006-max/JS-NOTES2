@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Editing</title>
+</head>
+<body style="color: white; background-color: black;">
+    <ul class="languages">
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+    
+</body>
+<script>
+    // create and add
+    function addlang(langname) {
+       const vd = document.createElement('li')
+       vd.innerHTML = langname
+       document.querySelector('.languages').appendChild(vd)
+    }
+    addlang('Python')
+    // edit
+    // eg1
+   const aava = document.querySelector('li:nth-child(2)')
+   const newli = document.createElement('li')
+   newli.innerHTML = 'C++'
+   aava.replaceWith(newli) // existing 2nd li will be replaced with newli
+   // remove
+const aava2 = document.querySelector('li:nth-child(3)')
+   const newli2 = document.createElement('li')
+   aava2.remove(newli2) // existing 3rd li will be removed
+   </script>
+</html>
